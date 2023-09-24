@@ -1,0 +1,17 @@
+<div class="header">
+    <h1 class="header-title">Customer Management</h1>
+  </div>
+
+<div class="container" [@fileUploaded]="showSuccessMessage ? 'show' : 'hide'">
+    <div class="upload-box">
+      <h3 class="title">Bulk Insert</h3>
+      <div class="upload-input">
+        <input type="file" (change)="onFileSelected($event)" id="fileInput"  accept=".csv" style="display: none" />
+        <label for="fileInput" class="custom-file-upload">Choose File</label>
+      </div>
+      <br>
+      <button (click)="uploadFile()" class="upload-button">Upload</button>
+      <div *ngIf="selectedFileName" class="selected-file">Selected File: {{ selectedFileName }}</div>
+    </div>
+  </div>
+  

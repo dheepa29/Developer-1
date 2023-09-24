@@ -1,0 +1,15 @@
+.my-component {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .my-component mat-drawer-container {
+    height: 100vh;
+  }
+  
+  .my-component mat-drawer {
+    width: 260px;
+    background: #0f172a;
+    /* background: blue; */
+  }
+  

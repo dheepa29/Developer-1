@@ -1,0 +1,38 @@
+<div class="invoice-list">
+    <h1 class="invoice-list-header">Invoice List</h1>
+    <div class="search-bar">
+        <div class="search-input-group">
+          <label for="customerId" class="search-label">Customer ID:</label>
+          <input type="text" id="customerId" [(ngModel)]="customerId" class="search-input" />
+        </div>
+        <div class="search-input-group">
+          <label for="status" class="search-label">Status:</label>
+          <input type="text" id="status" [(ngModel)]="status" class="search-input" />
+        </div>
+        <button (click)="search()" class="search-button">Search</button>
+      </div>
+    <table class="invoice-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Customer ID</th>
+          <th>Email</th>
+          <th>Amount Due</th>
+          <th>Due Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let invoice of invoices" class="invoice-row" (click)="openModal(invoice)">
+          <td>{{ invoice.name }}</td>
+          <td>{{ invoice.customerId }}</td>
+          <td>{{ invoice.email }}</td>
+          <td>{{ invoice.amountDue | currency:'USD':'symbol':'1.2-2' }}</td>
+          <td>{{ invoice.dueDate | date:'MM/dd/yyyy' }}</td>
+          <td>{{ invoice.status }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <app-invoice-detail [selectedInvoice]="selectedInvoice" *ngIf="showModal"></app-invoice-detail> -->
+  </div>
+  

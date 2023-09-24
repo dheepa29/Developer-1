@@ -1,0 +1,13 @@
+<!-- <router-outlet></router-outlet> -->
+<div class="my-component">
+<mat-drawer-container >
+    <!-- <mat-drawer mode="side" open = "true"> -->
+      <mat-drawer mode="side" [opened]="sideBarOpen" *ngIf="showHead">
+      <app-sidenav *ngIf="showHead"></app-sidenav>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-header (toggleSidebarForMe)="sideBarToggler()" *ngIf="showHead"></app-header>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

@@ -1,0 +1,24 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      <!-- <img src="./assets/logo.svg" alt="Company Logo" /> -->
+      <h2 matSubheader class="mt-2">BBC</h2>
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">APPLICATIONS</h2>
+  
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home" >
+      <span><mat-icon>home</mat-icon></span>
+      <span>Home</span> 
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/customermodule">
+      <span><mat-icon>dashboard</mat-icon></span>
+      <span>Customers</span> 
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard"> <span><mat-icon>add</mat-icon></span> <span>Bulk Insert</span> </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/invoicelist"> <span><mat-icon>receipt</mat-icon></span> <span>Invoice Status</span> </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/Payment"> <span><mat-icon>payment</mat-icon></span> <span>Payment Status </span></a>
+    
+    
+    <!-- <a mat-list-item> <mat-icon>edit</mat-icon> Link 5 </a>
+    <a mat-list-item> <mat-icon>edit</mat-icon> Link 6 </a> -->
+  </mat-nav-list>

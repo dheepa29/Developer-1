@@ -1,0 +1,34 @@
+<h2>Add Customer</h2>
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Customer ID" formControlName="customerid">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="name" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Unit Consumption" formControlName="unitconsumption">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="billduedate" formControlName="billduedate">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="email" formControlName="email">
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="telephone" formControlName="telephone">
+  </mat-form-field>
+  <!-- Repeat similar input elements for other form fields -->
+
+  <div class="form-actions">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+    <button mat-icon-button class="close-button" (click)="closeDialog()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+</form>

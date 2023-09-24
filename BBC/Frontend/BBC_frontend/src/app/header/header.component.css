@@ -1,0 +1,69 @@
+/* Style the header */
+.header {
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the menu icon/button */
+.menu-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+/* Style the user menu */
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the user button */
+.user-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Style the user image */
+.user-image {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+/* Style the arrow-down icon */
+.arrow-down {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown content when the user button is hovered over */
+.user-menu:hover .dropdown-content {
+  display: block;
+}

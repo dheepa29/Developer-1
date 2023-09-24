@@ -1,0 +1,26 @@
+<!-- invoice-detail-modal.component.html -->
+<div class="modal-content">
+  <!-- <span class="close-button" (click)="closeModal()">
+    <mat-icon>close</mat-icon>
+  </span> -->
+  <span class="close-icon" (click)="closeModal()">&#10006;</span>
+<h2>Invoice Details</h2>
+<div>
+  <!-- Close button (top-right) -->
+  
+  <p><strong>Name:</strong> {{ data.invoiceData.name }}</p>
+  <p><strong>Customer ID:</strong> {{ data.invoiceData.customerId }}</p>
+  <p><strong>Email:</strong> {{ data.invoiceData.email }}</p>
+  <p><strong>Amount Due:</strong> {{ data.invoiceData.amountDue | currency:'USD':'symbol':'1.2-2' }}</p>
+  <p><strong>Due Date:</strong> {{ data.invoiceData.dueDate | date:'MM/dd/yyyy' }}</p>
+  <p><strong>Status:</strong> {{ data.invoiceData.status }}</p>
+</div>
+<!-- <button (click)="markAsPaid()">Mark as Paid</button> -->
+<!-- Display the "Mark as Paid" button if showMarkAsPaidButton is true -->
+<button *ngIf="showMarkAsPaidButton" (click)="markAsPaid()" class="btn btn-primary">Mark as Paid</button>
+
+<!-- Display the "Get Receipt" button if showMarkAsPaidButton is false -->
+<button *ngIf="!showMarkAsPaidButton" (click)="generatePDF()" class="btn btn-primary">Get Receipt</button>
+
+
+</div>

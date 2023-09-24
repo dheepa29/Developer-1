@@ -1,0 +1,49 @@
+/* Styles for the modal overlay */
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  /* Styles for the modal dialog */
+  .modal-dialog {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 90vw; /* 90% of viewport width */
+    max-width: 400px; /* Limit the maximum width */
+    max-height: 80vh; /* Limit the maximum height to 80% of the viewport height */
+    overflow-y: auto; /* Add a scrollbar if the content overflows */
+  }
+  
+  /* Center the form within the modal dialog */
+  h2 {
+    text-align: center;
+  }
+  
+  /* Apply padding to form fields */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Center-align the form actions */
+  .form-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Add some space between the buttons */
+  .form-actions button {
+    margin-right: 10px;
+  }
+  
