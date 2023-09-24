@@ -22,7 +22,7 @@ public class DBUtil {
 				Class.forName(driver);
 				connection = DriverManager.getConnection(url , user , password);
 			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
+	
 				e.printStackTrace();
 			}
 		}
