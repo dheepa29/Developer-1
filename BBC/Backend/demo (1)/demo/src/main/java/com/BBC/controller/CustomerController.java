@@ -66,12 +66,11 @@ public class CustomerController {
             @RequestParam(value = "customerId", required = false) String customerId,
             @RequestParam(value = "status", required = false) String status) {
     	
-    	System.out.println(customerId);
-    	System.out.println(status);
+    
 
         // Call your service method to retrieve filtered invoices
         List<Invoice> filteredInvoices = invoiceservice.findInvoicesByCustomerIdAndStatus(customerId, status);
-        System.out.println("Total Invoices Found: " + filteredInvoices);
+        
         
 
         return ResponseEntity.ok(filteredInvoices);
@@ -93,7 +92,6 @@ public class CustomerController {
     
     @PostMapping("/create")
     public ResponseEntity<customer> createCustomer(@RequestBody customer customer) {
-    	System.out.println("Inside createCustomer method");
         customer savedCustomer = customerserviceimpl.savecustomer(customer);
         return new ResponseEntity<>(savedCustomer, HttpStatus.CREATED);
     }
