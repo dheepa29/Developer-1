@@ -27,8 +27,7 @@ public class CustomerServiceImpl {
         try {
             List<customer> products = helper.convertExcelToListOfProduct(file.getInputStream());
             this.customerRepo.saveAll(products);
-            //invoiceService.generateAndSaveInvoice(customerRepo.saveAll(products));
-         // Generate and save invoices for each customer
+            
             for (customer savedCustomer : products) {
                 invoiceService.generateAndSaveInvoice(savedCustomer);
             }
@@ -43,7 +42,7 @@ public class CustomerServiceImpl {
     }
     
     public customer savecustomer(customer cus) {
-    	System.out.println(cus);
+    
     	invoiceService.generateAndSaveInvoice(cus);
     	return this.customerRepo.save(cus);
     }
